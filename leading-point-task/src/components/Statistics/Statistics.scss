@@ -1,0 +1,42 @@
+@import "../../sass/utils/mixins";
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(29%, 1fr));
+    column-gap: 2rem;
+    // Make The Card Responsive at sm & xs
+    @include respond(sm) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    @include respond(xs) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 1.2rem;
+        padding: 2.4rem;
+        border: 0.2rem solid var(--color-gray-8);
+    }
+    &--circle--progress {
+        height: 9.5rem;
+    }
+    &--info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__label {
+            height: fit-content;
+            font-size: var(--font-size-18);
+            font-weight: bold;
+        }
+        &__number {
+            font-size: var(--font-size-22);
+            font-weight: bold;
+            height: fit-content;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.custom-card {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid var(--color-gray-8);
+    border-radius: 1.2rem;
+    padding: 2.4rem;
+    &>img {
+        margin-block-end: 3rem;
+    }
+    &__info {
+        display: grid;
+        row-gap: 1rem;
+        &__desc {
+            color: var(--color-black-1);
+        }
+    }
+    &__specs {
+        margin-top: 2rem;
+        display: flex;
+        color: var(--color-black-1);
+        &>div {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            &>img {
+                margin-inline-end: 1rem;
+            }
+        }
+    }
+    &__button {
+        margin-top: 2rem;
+        &>button {
+            height: 5.2rem;
+            border-radius: 3.6rem;
+            font-size: var(--font-size-16);
+            font-weight: 500;
+            width: 100%;
+            color: var(--color-black-2);
+            background-color: inherit;
+        }
+    }
+}

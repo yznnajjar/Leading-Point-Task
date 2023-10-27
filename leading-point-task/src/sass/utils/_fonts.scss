@@ -1,10 +1,10 @@
-$englishFontName: 'Roboto';
+$englishFontName: 'GeneralSans';
 
 /* Include English Font */
 
-@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Thin.ttf', normal, 100, 'truetype');
-@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Light.ttf', normal, 300, 'truetype');
-@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Regular.ttf', normal, 400, 'truetype');
-@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Medium.ttf', normal, 500, 'truetype');
-@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Bold.ttf', normal, 700, 'truetype');
-@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Black.ttf', normal, 900, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/GeneralSans-Thin.ttf', normal, 100, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/GeneralSans-Light.ttf', normal, 300, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/GeneralSans-Regular.ttf', normal, 400, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/GeneralSans-Medium.ttf', normal, 500, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/GeneralSans-Bold.ttf', normal, 700, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/GeneralSans-Black.ttf', normal, 900, 'truetype');

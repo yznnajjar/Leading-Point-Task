@@ -28,12 +28,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                 <AntdLayout>
                     <Content>
-                        <Row>
-                            <Col xs={24} sm={18} md={12} lg={8} xl={6}>
-                                {/* Your content */}
-                                {children}
-                            </Col>
-                        </Row>
+
+                        {/* Your content */}
+                        {children}
+
                     </Content>
 
 

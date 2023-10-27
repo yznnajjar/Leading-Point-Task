@@ -1,4 +1,10 @@
+@import "../../sass/utils/mixins";
 .sidebar {
+    @include respond(sm) {
+        .ant-layout-sider .ant-layout-sider-dark .ant-layout-sider-below {
+            width: 100vw !important;
+        }
+    }
     &--logo {
         height: 10rem;
         display: grid;

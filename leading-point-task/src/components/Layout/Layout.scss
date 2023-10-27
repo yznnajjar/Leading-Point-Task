@@ -4,4 +4,9 @@
     .ant-layout-sider {
         background-color: var(--color-white);
     }
+    .ant-layout-content {
+        padding-inline: 0;
+        margin: 3rem;
+        margin-block-start: 0;
+    }
 }

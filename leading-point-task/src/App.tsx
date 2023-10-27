@@ -8,9 +8,9 @@ import AppRoutes from 'routes/AppRoutes';
 
 function App() {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <Suspense fallback={<LoadingOverLay />}>
-        <main id="content-root" className='h-screen' style={{ border: "2px solid purple" }}>
+        <main id="content-root" className='h-screen'>
           <AppRoutes />
         </main>
       </Suspense>
