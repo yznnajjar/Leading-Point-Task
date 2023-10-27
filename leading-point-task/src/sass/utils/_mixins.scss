@@ -1,0 +1,102 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint==xxs {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+    @if $breakpoint==xs {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+    @if $breakpoint==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+    @if $breakpoint==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $breakpoint==lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @if $breakpoint==xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @if $breakpoint==xxl {
+        @media (max-width: 1600px) {
+            @content;
+        }
+    }
+}
+
+@mixin respond-minwidth($brakpoint) {
+    @if $brakpoint==xs {
+        @media (min-width: 480px) {
+            @content;
+        }
+    }
+    @if $brakpoint==sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+    @if $brakpoint==md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @if $brakpoint==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @if $brakpoint==xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if $brakpoint==xxl {
+        @media (min-width: 1600px) {
+            @content;
+        }
+    }
+}
+
+@mixin scrollable() {
+    /* Scrollbar styles */
+    &::-webkit-scrollbar {
+        width: 0.45rem;
+    }
+    &::-webkit-scrollbar-track {
+        opacity: 1;
+        background: var(--color-gray-1-2) !important;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-gray-2-1);
+        border-radius: 15px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgb(134, 133, 133);
+    }
+    &::-webkit-scrollbar-thumb:active {
+        background: rgb(116, 115, 115);
+    }
+}
+
+// This mixin will use to generate font-face for our website
+@mixin fontFace($fontName, $fileName, $fontStyle, $fontWeight, $format) {
+    @font-face {
+        font-family: $fontName;
+        font-style: $fontStyle;
+        font-weight: $fontWeight;
+        font-display: swap;
+        src: local($fontName), url($fileName) format($format);
+    }
+}

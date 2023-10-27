@@ -1,34 +1,20 @@
-import { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-
-import { useAppSelector } from './store/hooks';
+import { Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+// Components
+import LoadingOverLay from 'components/LoadingOverLay';
+// Routers
+import AppRoutes from 'routes/AppRoutes';
 
 
 function App() {
-  const theme = useAppSelector((state) => state.util.theme);
-
-  useEffect(() => {
-    theme === 'light' ?
-      document.documentElement.classList.remove('dark')
-      :
-      document.documentElement.classList.add('dark');
-
-  }, [theme]);
-
   return (
-    <div className="max-w-[1920px] h-screen m-auto animate-fade-in-up">
       <BrowserRouter>
-        {/* <Suspense fallback={<SplashPage />}>
-          <Routes>
-            <Route path="/" element={<PrivateOutlet />}>
-              <Route path="" element={<Dashboard />} />
-
-            </Route>
-            <Route path="*" element={<Navigate to={'/'} />} />
-          </Routes>
-        </Suspense> */}
-      </BrowserRouter>
-    </div>
+      <Suspense fallback={<LoadingOverLay />}>
+        <main id="content-root" className='h-screen' style={{ border: "2px solid purple" }}>
+          <AppRoutes />
+        </main>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 

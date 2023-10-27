@@ -1,0 +1,47 @@
+html {
+  [dir="rtl"] {
+    // flip ant right and left icon
+    .anticon.anticon-right,
+    .anticon.anticon-left,
+    .anticon.anticon-arrow-right,
+    .anticon.anticon-arrow-left,
+    .anticon.anticon-play-circle.icon-control {
+      transform: scale(-1);
+    }
+
+    // since antd handle this for pagenation component then
+    // remove the scaling
+    .ant-pagination-item-link {
+      .anticon.anticon-right,
+      .anticon.anticon-left {
+        transform: scale(1);
+      }
+    }
+
+    // remove boarder radius tabel header first child
+    .ant-table-container table > thead > tr:first-child th:first-child {
+      border-top-left-radius  : 0px;
+      border-top-right-radius : 0px;
+      text-align              : center;
+    }
+
+    // remove boarder radius tabel header last child
+    .ant-table-container table > thead > tr:first-child th:last-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+
+    // In rtl, make the default text align is right nested of left
+    .ant-modal {
+      text-align: right;
+
+      // in ant modal footer, make space between button from right nested of left
+      .ant-modal-footer {
+        button + button {
+          margin-right: 0.8rem;
+          margin-left: inherit;
+        }
+      }
+    }
+  }
+}

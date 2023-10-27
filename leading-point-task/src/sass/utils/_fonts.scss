@@ -1,0 +1,10 @@
+$englishFontName: 'Roboto';
+
+/* Include English Font */
+
+@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Thin.ttf', normal, 100, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Light.ttf', normal, 300, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Regular.ttf', normal, 400, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Medium.ttf', normal, 500, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Bold.ttf', normal, 700, 'truetype');
+@include fontFace($englishFontName, '../../assets/fonts/english/Roboto-Black.ttf', normal, 900, 'truetype');
