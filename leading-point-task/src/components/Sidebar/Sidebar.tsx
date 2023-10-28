@@ -49,12 +49,26 @@ const MENUS_ITEMS: MenuProps['items'] = [
         key: 'documentation',
         icon: <img src='doc.svg' />,
     },
+    {
+        label: 'Settings',
+        key: 'settings',
+        className:"custom-menu-item",
+        icon: <img src='settings.svg'/>,
+    },
+    {
+        label: 'Help center',
+        key: 'help_center',
+        className:"help-center-class",
+        icon: <img src='help-outline.svg' />,
+    },
+    {
+        label: 'Louise Thompson',
+        key: 'name',
+        icon: <img src='user.svg' />,
+    },
 ]
 
-const SETTINGS_MENU: Record<string, MenuItem> = {
-    SETTINGS: { label: 'Settings', icon: <SettingOutlined /> },
-    HELP_CENTER: { label: 'Help center', icon: <QuestionCircleOutlined /> },
-}
+
 const SideBar = () => {
     return (
         <div className="sidebar">
@@ -67,6 +81,7 @@ const SideBar = () => {
                     <img src="/Logo.svg" alt="My Logo" />
                 </div>
                 <Menu
+                    className="sidebar__menu"
                     onClick={() => {
                         console.log("Menu clicked")
                     }}
