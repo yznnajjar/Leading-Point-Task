@@ -21,7 +21,7 @@ const MENUS_ITEMS: MenuProps['items'] = [
     },
     {
         label: 'Available units',
-        key: 'Available_units',
+        key: 'units',
         icon: <img src='units.svg' />,
     },
     {
@@ -85,7 +85,7 @@ const SideBar = () => {
                     onClick={() => {
                         console.log("Menu clicked")
                     }}
-                    defaultSelectedKeys={['projects']}
+                    defaultSelectedKeys={[location.pathname.replace('/','')]}
                     items={MENUS_ITEMS}
                 />
             </Sider>

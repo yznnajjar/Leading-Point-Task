@@ -7,7 +7,8 @@ import AppLayout from 'components/Layout';
 
 // Pages Route
 const Dashboard = lazy(() => import('pages/Dashboard'));
-const Projects = lazy(() => import('pages/Projects/Projects'));
+const Projects = lazy(() => import('pages/Projects'));
+const Units = lazy(() => import('pages/UnitsTable'));
 
 
 
@@ -17,6 +18,7 @@ function AppRoutes() {
         <AppLayout>
             <Routes>
                 <Route path="Dashboard" element={<Dashboard />} />
+                <Route path="units" element={<Units />} />
                 <Route path="projects" element={<Projects />} />
 
                 <Route path="*" element={<Navigate to={'/'} />} />
