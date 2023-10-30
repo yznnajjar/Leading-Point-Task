@@ -5,18 +5,17 @@ import {
     FetchArgs,
     FetchBaseQueryError,
 } from '@reduxjs/toolkit/query/react';
-import type { RootState } from '../index';
 
 
 const baseQuery = fetchBaseQuery({
     baseUrl: import.meta.env.DASHBOARD_API,
-    prepareHeaders: (headers, { getState }) => {
-        const token = (getState() as RootState).user.token;
-        if (token) {
-            headers.set('authorization', `Bearer ${token}`);
-        }
-        return headers;
-    },
+    // prepareHeaders: (headers, { getState }) => {
+    //     const token = (getState() as RootState).user.token;
+    //     if (token) {
+    //         headers.set('authorization', `Bearer ${token}`);
+    //     }
+    //     return headers;
+    // },
 });
 
 const baseQueryWithReauth: BaseQueryFn<
@@ -25,7 +24,7 @@ const baseQueryWithReauth: BaseQueryFn<
     FetchBaseQueryError
 > = async (args, api, extraOptions) => {
     const result = await baseQuery(args, api, extraOptions);
-    
+
     return result;
 };
 

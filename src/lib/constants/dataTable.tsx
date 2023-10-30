@@ -280,9 +280,8 @@ const columns: Array<{
   dataIndex: string;
   key: string;
   sorter?: any,
-  sortOrder?: string,
   customSorterIcons?: ReactNode,
-  render?: (text?: string) => ReactNode | JSX.Element;
+  render?: (text?: any) => any;
 }> = [
   {
     title: <Checkbox />,
@@ -297,7 +296,7 @@ const columns: Array<{
       /></span>),
     dataIndex: 'projectName',
     key: 'projectName',
-    render: (text: string) => {
+    render: (text: string)  => {
       return (
         <span><Image src='folder-shared.svg' /> {'  '} {text}</span>
       );

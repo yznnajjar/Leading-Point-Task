@@ -1,4 +1,4 @@
-import React,{FC,ReactNode} from 'react';
+import React,{FC} from 'react';
 import {Button} from 'antd';
 
 // Style
@@ -48,7 +48,7 @@ town district. With 3 bedrooms and a heated pool.</div>
       <div className='custom-card__button'>
       <Button>View Listing Details</Button>
       </div>
-        
+
     </div>
   );
 };

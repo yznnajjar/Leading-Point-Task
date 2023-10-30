@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Layout as AntdLayout, Col, Row } from "antd";
+import { Layout as AntdLayout } from "antd";
 import classnames from "classnames";
 
 // Components
